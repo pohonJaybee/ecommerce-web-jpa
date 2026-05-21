@@ -27,6 +27,8 @@ public class Product {
     @Column(name = "product_name")
     private String productName;
 
+    private Integer stock;
+
     private double harga;
 
     @Lob
