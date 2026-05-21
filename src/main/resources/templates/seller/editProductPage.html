@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Panel - Perbarui Data Barang</title>
+  <!-- Menggunakan Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons untuk ikon modern -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#FBF9F4] text-stone-800 antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- NAVBAR UTAMA SYSTEM -->
+  <nav class="bg-white border-b border-stone-200/60 shadow-sm w-full sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Tag Seller -->
+        <div class="flex-shrink-0 flex items-center gap-3">
+          <a href="#" class="text-2xl font-serif font-bold text-emerald-900 flex items-center gap-2 tracking-wide">
+            <i data-lucide="sparkles" class="w-6 h-6 text-amber-600"></i>
+            Batik<span class="text-amber-700 font-sans font-medium text-xl">Hub</span>
+          </a>
+          <span class="bg-amber-100 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider border border-amber-200 shadow-sm">
+            Seller Center
+          </span>
+        </div>
+
+        <!-- Keluar dari Mode Seller -->
+        <div class="flex items-center gap-4">
+          <a href="#profile" class="text-xs font-medium text-stone-500 hover:text-amber-700 transition-colors flex items-center gap-1">
+            <i data-lucide="arrow-left-right" class="w-3.5 h-3.5"></i> Hub Pembeli
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- KONTEN UTAMA PANEL SELLER -->
+  <main class="max-w-3xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 flex-grow space-y-6">
+    
+    <!-- LINK KEMBALI KE LIST -->
+    <div class="flex items-center justify-between">
+      <a href="#list" class="text-xs font-semibold text-stone-500 hover:text-amber-700 transition-colors flex items-center gap-1.5 bg-white px-3 py-2 rounded-xl border border-stone-200/60 shadow-sm">
+        <i data-lucide="chevron-left" class="w-4 h-4"></i> Kembali ke List Barang
+      </a>
+    </div>
+
+    <!-- FORM EDIT BARANG -->
+    <form class="bg-white rounded-2xl border border-stone-200/80 shadow-sm overflow-hidden" action="#" method="POST">
+      
+      <!-- Form Header -->
+      <div class="px-6 py-5 bg-gradient-to-r from-amber-900 to-amber-800 text-white flex items-center gap-2">
+        <i data-lucide="edit-3" class="w-5 h-5 text-amber-300"></i>
+        <div>
+          <h2 class="text-sm font-bold text-white uppercase tracking-wider">Perbarui Informasi Produk</h2>
+          <p class="text-[11px] text-amber-100/70">Ubah detail spesifikasi, harga, atau stok kain batik Anda.</p>
+        </div>
+      </div>
+
+      <!-- Input Fields -->
+      <div class="p-6 space-y-5">
+
+        <!-- ID Produk (Locked / Tidak Bisa Diubah) -->
+        <div class="space-y-1.5">
+          <label class="text-xs font-medium text-stone-400 flex items-center gap-1">
+            ID Produk (Permanen) <i data-lucide="lock" class="w-3 h-3 text-stone-400"></i>
+          </label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+              <i data-lucide="hash" class="h-4 w-4 text-stone-400"></i>
+            </div>
+            <input 
+              type="text" 
+              disabled 
+              value="BTK-SGN-001" 
+              class="w-full bg-stone-100 border border-stone-200 rounded-xl pl-10 pr-4 py-3 text-sm text-stone-400 font-mono tracking-wider cursor-not-allowed select-none"
+            >
+          </div>
+          <p class="text-[10px] text-stone-400 italic">ID Produk tidak dapat diubah agar tidak merusak histori transaksi pelanggan.</p>
+        </div>
+
+        <!-- Nama Produk -->
+        <div class="space-y-1.5">
+          <label for="edit_product_name" class="text-xs font-medium text-stone-500 block">Nama Produk Batik</label>
+          <input 
+            id="edit_product_name"
+            name="edit_product_name"
+            type="text" 
+            required
+            value="Kemeja Pria Batik Cap Motif Sogan Solo"
+            class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-amber-600 transition-all font-medium"
+          >
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Harga -->
+          <div class="space-y-1.5">
+            <label for="edit_product_price" class="text-xs font-medium text-stone-500 block">Harga Produk (Rp)</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                <span class="text-xs font-semibold text-stone-400">Rp</span>
+              </div>
+              <input 
+                id="edit_product_price"
+                name="edit_product_price"
+                type="number" 
+                required
+                min="0"
+                value="275000"
+                class="w-full bg-white border border-stone-200 rounded-xl pl-10 pr-4 py-3 text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-amber-600 transition-all font-medium"
+              >
+            </div>
+          </div>
+
+          <!-- Stok -->
+          <div class="space-y-1.5">
+            <label for="edit_product_stock" class="text-xs font-medium text-stone-500 block">Jumlah Persediaan (Stok)</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                <i data-lucide="layers" class="h-4 w-4 text-stone-400"></i>
+              </div>
+              <input 
+                id="edit_product_stock"
+                name="edit_product_stock"
+                type="number" 
+                required
+                min="0"
+                value="8"
+                class="w-full bg-white border border-stone-200 rounded-xl pl-10 pr-4 py-3 text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-amber-600 transition-all font-medium"
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Deskripsi Produk -->
+        <div class="space-y-1.5">
+          <label for="edit_product_description" class="text-xs font-medium text-stone-500 block">Deskripsi Detail Produk</label>
+          <textarea 
+            id="edit_product_description"
+            name="edit_product_description"
+            rows="4" 
+            required
+            class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-amber-600 transition-all leading-relaxed"
+          >Kemeja batik cap tradisional motif Sogan Solo warna cokelat alam soga klasik. Potongan slim fit modern berfuring katun halus, nyaman dipakai seharian untuk acara formal maupun kerja.</textarea>
+        </div>
+
+        <!-- Gambar Produk (Ubah Gambar / Preview Current Image) -->
+        <div class="space-y-1.5">
+          <label class="text-xs font-medium text-stone-500 block">Foto / Gambar Produk Saat Ini</label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center p-4 bg-stone-50 rounded-xl border border-stone-200/60">
+            
+            <!-- Mini Thumbnail Pre-existing Image -->
+            <div class="h-28 bg-stone-200 rounded-lg flex flex-col items-center justify-center text-stone-400 border border-stone-300 relative overflow-hidden group">
+              <i data-lucide="image" class="w-6 h-6 mb-1 text-stone-400"></i>
+              <span class="text-[9px] font-medium text-stone-500">Gambar_Lama.jpg</span>
+            </div>
+
+            <!-- Upload Zone Baru -->
+            <div class="sm:col-span-2 border-2 border-dashed border-stone-200 rounded-xl p-4 bg-white hover:bg-stone-50 transition-colors text-center cursor-pointer relative group h-28 flex flex-col justify-center items-center">
+              <input 
+                type="file" 
+                id="edit_product_image"
+                name="edit_product_image"
+                accept="image/*"
+                class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
+              >
+              <i data-lucide="refresh-cw" class="w-4 h-4 text-amber-600 mb-1 group-hover:rotate-180 transition-transform duration-500"></i>
+              <p class="text-xs font-semibold text-stone-700">Ganti dengan Foto Baru</p>
+              <p class="text-[9px] text-stone-400">Biarkan kosong jika tidak ingin mengubah gambar</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- AREA BUTTON SIMPAN & BATAL -->
+        <div class="flex items-center justify-end gap-3 pt-4 border-t border-stone-100 mt-6">
+          <a 
+            href="#list"
+            class="px-5 py-2.5 border border-stone-200 rounded-xl text-sm font-medium text-stone-600 bg-white hover:bg-stone-50 text-center active:scale-95 transition-all shadow-sm"
+          >
+            Batal
+          </a>
+          <button 
+            type="submit" 
+            class="px-6 py-2.5 bg-amber-600 text-white rounded-xl text-sm font-medium hover:bg-amber-700 active:scale-95 transition-all shadow-md flex items-center gap-1.5"
+          >
+            <i data-lucide="check-circle" class="w-4 h-4"></i> Simpan Perubahan
+          </button>
+        </div>
+
+      </div>
+
+    </form>
+
+  </main>
+
+  <!-- FOOTER PANEL -->
+  <footer class="text-center py-6 text-xs text-stone-400 w-full bg-white border-t border-stone-100">
+    &copy; 2026 BatikHub Seller Hub Nusantara. Dashboard Mitra Internal.
+  </footer>
+
+  <!-- Script untuk inisialisasi Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
