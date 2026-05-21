@@ -73,7 +73,7 @@
         </div>
         <input 
           type="text" 
-          placeholder="Cari model baju, motif Parang, Megamendung, Tulis..." 
+          placeholder="Cari model baju, motif Parang, Megamendung, dll..." 
           class="block w-full pl-12 pr-24 py-4 border border-stone-200 rounded-2xl bg-white placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-emerald-800 focus:border-emerald-800 text-stone-800 text-base transition-all"
         >
         <!-- Tombol Cari di dalam Input (Opsional untuk estetika desktop) -->
@@ -97,87 +97,118 @@
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         
         <!-- Kartu Produk 1 -->
-        <div class="bg-white rounded-2xl border border-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-all group">
-          <!-- Placeholder Gambar Produk dengan nuansa warna batik -->
-          <div class="bg-gradient-to-br from-emerald-900 to-amber-900 h-48 sm:h-60 relative flex items-center justify-center text-amber-200/30 overflow-hidden">
-            <i data-lucide="shirt" class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
-          </div>
-          <!-- Detail Produk -->
-          <div class="p-4 space-y-1.5">
-            <p class="text-xs text-stone-400 font-medium">Kemeja Pria</p>
-            <h3 class="font-medium text-stone-800 text-sm sm:text-base line-clamp-1 group-hover:text-emerald-800 transition-colors">Kemeja Batik Tulis Motif Parang</h3>
-            <!-- Deskripsi Panjang Produk 1 -->
-            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">
-              Kemeja eksklusif yang dibuat manual oleh maestro pengrajin lokal menggunakan canting dan lilin malam di atas bahan katun primisima premium. Memiliki tekstur kain yang sangat halus, sejuk dipakai seharian, serta warna soga alam yang tidak mudah pudar meskipun dicuci berulang kali.
-            </p>
-            <p class="text-emerald-800 font-semibold text-sm sm:text-base pt-1">Rp 349.000</p>
-            <div class="pt-1 flex items-center text-xs text-stone-500 gap-1">
-              <span class="text-stone-400">Stock:</span>
-              <span class="font-medium text-stone-700">10</span>
+        <div class="bg-white rounded-2xl border border-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <!-- Placeholder Gambar Produk dengan nuansa warna batik -->
+            <div class="bg-gradient-to-br from-emerald-900 to-amber-900 h-48 sm:h-60 relative flex items-center justify-center text-amber-200/30 overflow-hidden">
+              <i data-lucide="shirt" class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
             </div>
+            <!-- Detail Produk -->
+            <div class="p-4 space-y-1.5">
+              <p class="text-xs text-stone-400 font-medium">Kemeja Pria</p>
+              <h3 class="font-medium text-stone-800 text-sm sm:text-base line-clamp-1 group-hover:text-emerald-800 transition-colors">Kemeja Batik Tulis Motif Parang</h3>
+              <!-- Deskripsi Panjang Produk 1 -->
+              <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">
+                Kemeja eksklusif yang dibuat manual oleh maestro pengrajin lokal menggunakan canting dan lilin malam di atas bahan katun primisima premium. Memiliki tekstur kain yang sangat halus, sejuk dipakai seharian, serta warna soga alam yang tidak mudah pudar meskipun dicuci berulang kali.
+              </p>
+              <p class="text-emerald-800 font-semibold text-sm sm:text-base pt-1">Rp 349.000</p>
+              <div class="pt-1 flex items-center text-xs text-stone-500 gap-1">
+                <span class="text-stone-400">Stock:</span>
+                <span class="font-medium text-stone-700">10</span>
+              </div>
+            </div>
+          </div>
+          <!-- Tombol Beli -->
+          <div class="p-4 pt-0">
+            <button class="w-full flex items-center justify-center gap-2 bg-emerald-800 hover:bg-emerald-900 text-white text-xs sm:text-sm font-semibold py-2.5 rounded-xl transition-all shadow-sm active:scale-[0.98]">
+              <i data-lucide="shopping-cart" class="w-4 h-4"></i> Beli Sekarang
+            </button>
           </div>
         </div>
 
         <!-- Kartu Produk 2 -->
-        <div class="bg-white rounded-2xl border border-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-all group">
-          <div class="bg-gradient-to-br from-amber-950 to-stone-900 h-48 sm:h-60 relative flex items-center justify-center text-amber-200/30">
-            <i data-lucide="sparkles" class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
+        <div class="bg-white rounded-2xl border border-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="bg-gradient-to-br from-amber-950 to-stone-900 h-48 sm:h-60 relative flex items-center justify-center text-amber-200/30">
+              <i data-lucide="sparkles" class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
+            </div>
+            <div class="p-4 space-y-1.5">
+              <p class="text-xs text-stone-400 font-medium">Blouse Wanita</p>
+              <h3 class="font-medium text-stone-800 text-sm sm:text-base line-clamp-1 group-hover:text-emerald-800 transition-colors">Blouse Modern Megamendung Sage</h3>
+              <!-- Deskripsi Panjang Produk 2 -->
+              <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">
+                Blouse etnik modern dengan potongan pola asimetris trendi yang dipadukan dengan keanggunan motif Megamendung khas pesisiran. Menggunakan bahan kombinasi katun rayon jacquard yang jatuh dengan indah di badan dan memberikan kilau satin mewah yang kasual saat terkena cahaya matahari.
+              </p>
+              <div class="flex items-center gap-2 pt-1">
+                <p class="text-emerald-800 font-semibold text-sm sm:text-base">Rp 199.000</p>
+              </div>
+              <div class="pt-1 flex items-center text-xs text-stone-500 gap-1">
+                <span class="text-stone-400">Stock:</span>
+                <span class="font-medium text-stone-700">10</span>
+              </div>
+            </div>
           </div>
-          <div class="p-4 space-y-1.5">
-            <p class="text-xs text-stone-400 font-medium">Blouse Wanita</p>
-            <h3 class="font-medium text-stone-800 text-sm sm:text-base line-clamp-1 group-hover:text-emerald-800 transition-colors">Blouse Modern Megamendung Sage</h3>
-            <!-- Deskripsi Panjang Produk 2 -->
-            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">
-              Blouse etnik modern dengan potongan pola asimetris trendi yang dipadukan dengan keanggunan motif Megamendung khas pesisiran. Menggunakan bahan kombinasi katun rayon jacquard yang jatuh dengan indah di badan dan memberikan kilau satin mewah yang kasual saat terkena cahaya matahari.
-            </p>
-            <div class="flex items-center gap-2 pt-1">
-              <p class="text-emerald-800 font-semibold text-sm sm:text-base">Rp 199.000</p>
-              <p class="text-xs text-stone-400 line-through">Rp 249.000</p>
-            </div>
-            <div class="pt-1 flex items-center text-xs text-stone-500 gap-1">
-              <span class="text-stone-400">Stock:</span>
-              <span class="font-medium text-stone-700">10</span>
-            </div>
+          <!-- Tombol Beli -->
+          <div class="p-4 pt-0">
+            <button class="w-full flex items-center justify-center gap-2 bg-emerald-800 hover:bg-emerald-900 text-white text-xs sm:text-sm font-semibold py-2.5 rounded-xl transition-all shadow-sm active:scale-[0.98]">
+              <i data-lucide="shopping-cart" class="w-4 h-4"></i> Beli Sekarang
+            </button>
           </div>
         </div>
 
         <!-- Kartu Produk 3 -->
-        <div class="bg-white rounded-2xl border border-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-all group">
-          <div class="bg-gradient-to-br from-emerald-950 to-amber-950 h-48 sm:h-60 relative flex items-center justify-center text-amber-200/30">
-            <i data-lucide="scissors" class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
-          </div>
-          <div class="p-4 space-y-1.5">
-            <p class="text-xs text-stone-400 font-medium">Kain Bahan</p>
-            <h3 class="font-medium text-stone-800 text-sm sm:text-base line-clamp-1 group-hover:text-emerald-800 transition-colors">Kain Batik Cap Pola Kawung 2m</h3>
-            <!-- Deskripsi Panjang Produk 3 -->
-            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">
-              Kain bahan lembaran sepanjang 2 meter dengan motif geometris Kawung klasik yang melambangkan kesucian dan keadilan. Dicap secara presisi menggunakan tembaga tradisional di atas material katun dobi bertekstur timbul yang mewah, sangat ideal untuk diproduksi menjadi kemeja kerja formal pria maupun rok lilit kebaya wanita.
-            </p>
-            <p class="text-emerald-800 font-semibold text-sm sm:text-base pt-1">Rp 125.000</p>
-            <div class="pt-1 flex items-center text-xs text-stone-500 gap-1">
-              <span class="text-stone-400">Stock:</span>
-              <span class="font-medium text-stone-700">10</span>
+        <div class="bg-white rounded-2xl border border-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="bg-gradient-to-br from-emerald-950 to-amber-950 h-48 sm:h-60 relative flex items-center justify-center text-amber-200/30">
+              <i data-lucide="scissors" class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
             </div>
+            <div class="p-4 space-y-1.5">
+              <p class="text-xs text-stone-400 font-medium">Kain Bahan</p>
+              <h3 class="font-medium text-stone-800 text-sm sm:text-base line-clamp-1 group-hover:text-emerald-800 transition-colors">Kain Batik Cap Pola Kawung 2m</h3>
+              <!-- Deskripsi Panjang Produk 3 -->
+              <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">
+                Kain bahan lembaran sepanjang 2 meter dengan motif geometris Kawung klasik yang melambangkan kesucian dan keadilan. Dicap secara presisi menggunakan tembaga tradisional di atas material katun dobi bertekstur timbul yang mewah, sangat ideal untuk diproduksi menjadi kemeja kerja formal pria maupun rok lilit kebaya wanita.
+              </p>
+              <p class="text-emerald-800 font-semibold text-sm sm:text-base pt-1">Rp 125.000</p>
+              <div class="pt-1 flex items-center text-xs text-stone-500 gap-1">
+                <span class="text-stone-400">Stock:</span>
+                <span class="font-medium text-stone-700">10</span>
+              </div>
+            </div>
+          </div>
+          <!-- Tombol Beli -->
+          <div class="p-4 pt-0">
+            <button class="w-full flex items-center justify-center gap-2 bg-emerald-800 hover:bg-emerald-900 text-white text-xs sm:text-sm font-semibold py-2.5 rounded-xl transition-all shadow-sm active:scale-[0.98]">
+              <i data-lucide="shopping-cart" class="w-4 h-4"></i> Beli Sekarang
+            </button>
           </div>
         </div>
 
         <!-- Kartu Produk 4 -->
-        <div class="bg-white rounded-2xl border border-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-all group">
-          <div class="bg-gradient-to-br from-stone-800 to-emerald-900 h-48 sm:h-60 relative flex items-center justify-center text-amber-200/30">
-            <i data-lucide="package" class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
-          </div>
-          <div class="p-4 space-y-1.5">
-            <p class="text-xs text-stone-400 font-medium">Aksesoris</p>
-            <h3 class="font-medium text-stone-800 text-sm sm:text-base line-clamp-1 group-hover:text-emerald-800 transition-colors">Selendang Sutra Motif Sogan Klasik</h3>
-            <!-- Deskripsi Panjang Produk 4 -->
-            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">
-              Aksesori premium berupa selendang panjang berbahan 100% sutra alam asli yang sangat lembut dan jatuh elegan. Menampilkan corak warna Sogan Solo klasik yang dibuat melalui proses pewarnaan alami yang rumit, memberikan sentuhan kemewahan paripurna saat disampirkan di bahu untuk melengkapi busana kebaya formal Anda.
-            </p>
-            <p class="text-emerald-800 font-semibold text-sm sm:text-base pt-1">Rp 450.000</p>
-            <div class="pt-1 flex items-center text-xs text-stone-500 gap-1">
-              <span class="text-stone-400">Stock:</span>
-              <span class="font-medium text-stone-700">10</span>
+        <div class="bg-white rounded-2xl border border-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="bg-gradient-to-br from-stone-800 to-emerald-900 h-48 sm:h-60 relative flex items-center justify-center text-amber-200/30">
+              <i data-lucide="package" class="w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
             </div>
+            <div class="p-4 space-y-1.5">
+              <p class="text-xs text-stone-400 font-medium">Aksesoris</p>
+              <h3 class="font-medium text-stone-800 text-sm sm:text-base line-clamp-1 group-hover:text-emerald-800 transition-colors">Selendang Sutra Motif Sogan Klasik</h3>
+              <!-- Deskripsi Panjang Produk 4 -->
+              <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">
+                Aksesori premium berupa selendang panjang berbahan 100% sutra alam asli yang sangat lembut dan jatuh elegan. Menampilkan corak warna Sogan Solo klasik yang dibuat melalui proses pewarnaan alami yang rumit, memberikan sentuhan kemewahan paripurna saat disampirkan di bahu untuk melengkapi busana kebaya formal Anda.
+              </p>
+              <p class="text-emerald-800 font-semibold text-sm sm:text-base pt-1">Rp 450.000</p>
+              <div class="pt-1 flex items-center text-xs text-stone-500 gap-1">
+                <span class="text-stone-400">Stock:</span>
+                <span class="font-medium text-stone-700">10</span>
+              </div>
+            </div>
+          </div>
+          <!-- Tombol Beli -->
+          <div class="p-4 pt-0">
+            <button class="w-full flex items-center justify-center gap-2 bg-emerald-800 hover:bg-emerald-900 text-white text-xs sm:text-sm font-semibold py-2.5 rounded-xl transition-all shadow-sm active:scale-[0.98]">
+              <i data-lucide="shopping-cart" class="w-4 h-4"></i> Beli Sekarang
+            </button>
           </div>
         </div>
 

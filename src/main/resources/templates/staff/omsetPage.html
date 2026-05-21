@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Panel - Data Penjualan & Omset</title>
+  <!-- Menggunakan Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons untuk ikon modern -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#FBF9F4] text-stone-800 antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- NAVBAR UTAMA SYSTEM (STAFF / SELLER) -->
+  <nav class="bg-white border-b border-stone-200/60 shadow-sm w-full sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Tag Staff -->
+        <div class="flex-shrink-0 flex items-center gap-3">
+          <a href="#" class="text-2xl font-serif font-bold text-emerald-900 flex items-center gap-2 tracking-wide">
+            <i data-lucide="sparkles" class="w-6 h-6 text-amber-600"></i>
+            Batik<span class="text-amber-700 font-sans font-medium text-xl">Hub</span>
+          </a>
+          <span class="bg-stone-100 text-stone-700 text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider border border-stone-200 shadow-sm">
+            Staff Dashboard
+          </span>
+        </div>
+
+        <!-- Identitas Singkat Akun -->
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center text-xs font-bold font-mono">
+            ST
+          </div>
+          <span class="text-xs font-medium text-stone-600 hidden sm:inline">Taufiq (Internal Staff)</span>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- KONTEN UTAMA DASHBOARD STAFF -->
+  <main class="max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 flex-grow space-y-6">
+    
+    <!-- NAVBAR INTERNAL (OMSET, LIST, TAMBAH, SEDANG DIKIRIM, PROFILE) -->
+    <div class="bg-white p-2 rounded-2xl border border-stone-200/80 shadow-sm flex items-center gap-1 overflow-x-auto scroller-hidden">
+      <!-- 1. Omset (Aktif) -->
+      <a href="#omset" class="flex items-center justify-center gap-2 px-4 py-2.5 bg-amber-600 text-white text-xs font-semibold rounded-xl shadow-sm transition-all flex-shrink-0">
+        <i data-lucide="trending-up" class="w-4 h-4"></i>
+        <span>Omset</span>
+      </a>
+
+      <!-- 2. List -->
+      <a href="#list" class="flex items-center justify-center gap-2 px-4 py-2.5 text-stone-500 hover:text-amber-700 hover:bg-stone-50 text-xs font-medium rounded-xl transition-all flex-shrink-0">
+        <i data-lucide="package" class="w-4 h-4 text-stone-400"></i>
+        <span>List</span>
+      </a>
+
+      <!-- 4. Sedang Dikirim -->
+      <a href="#dikirim" class="flex items-center justify-center gap-2 px-4 py-2.5 text-stone-500 hover:text-amber-700 hover:bg-stone-50 text-xs font-medium rounded-xl transition-all flex-shrink-0">
+        <i data-lucide="truck" class="w-4 h-4 text-stone-400"></i>
+        <span>Sedang Dikirim</span>
+      </a>
+
+      <!-- 5. Profile -->
+      <a href="#profile" class="flex items-center justify-center gap-2 px-4 py-2.5 text-stone-500 hover:text-amber-700 hover:bg-stone-50 text-xs font-medium rounded-xl transition-all flex-shrink-0">
+        <i data-lucide="user-cog" class="w-4 h-4 text-stone-400"></i>
+        <span>Profile</span>
+      </a>
+    </div>
+
+    <!-- RINGKASAN TOTAL OMSET (METRICS CARD) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="bg-white p-5 rounded-2xl border border-stone-200/80 shadow-sm flex items-center justify-between">
+        <div class="space-y-1">
+          <p class="text-xs font-medium text-stone-400 uppercase tracking-wider">Total Omset Penjualan</p>
+          <h3 class="text-2xl font-bold font-mono text-emerald-800">Rp 14.850.000</h3>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center border border-emerald-100">
+          <i data-lucide="dollar-sign" class="w-6 h-6"></i>
+        </div>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-stone-200/80 shadow-sm flex items-center justify-between">
+        <div class="space-y-1">
+          <p class="text-xs font-medium text-stone-400 uppercase tracking-wider">Total Produk Terjual</p>
+          <h3 class="text-2xl font-bold font-mono text-stone-800">54 <span class="text-xs font-sans text-stone-400 font-normal">Pcs</span></h3>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center border border-amber-100">
+          <i data-lucide="check-check" class="w-6 h-6"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABEL / LIST DATA PENJUALAN PRODUK -->
+    <div class="bg-white rounded-2xl border border-stone-200/80 shadow-sm overflow-hidden">
+      <!-- Table Header Title -->
+      <div class="px-6 py-5 border-b border-stone-100 flex justify-between items-center bg-stone-50/60">
+        <div class="flex items-center gap-2">
+          <i data-lucide="bar-chart-3" class="w-4 h-4 text-amber-600"></i>
+          <h2 class="text-xs font-bold text-stone-700 uppercase tracking-wider">Performa Stok Produk Terjual</h2>
+        </div>
+        <span class="text-[10px] font-semibold bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full border border-amber-200">
+          Live Update
+        </span>
+      </div>
+
+      <!-- Table Container -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-stone-100 text-[11px] font-bold text-stone-400 uppercase tracking-wider bg-stone-50/30">
+              <th class="py-4 px-6">Detail Produk Batik</th>
+              <th class="py-4 px-6 text-center">Stok Terjual</th>
+              <th class="py-4 px-6 text-right">Sub-Total Nilai</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-100 text-sm">
+            
+            <!-- Item 1 -->
+            <tr class="hover:bg-stone-50/40 transition-colors">
+              <td class="py-4 px-6">
+                <div class="font-semibold text-stone-800">Kain Batik Tulis Sutra Solo Motif Parang</div>
+                <div class="text-[11px] text-stone-400 font-mono">ID: BTK-PAR-001</div>
+              </td>
+              <td class="py-4 px-6 text-center font-bold text-stone-700 font-mono">20</td>
+              <td class="py-4 px-6 text-right font-semibold text-emerald-800 font-mono">Rp 5.500.000</td>
+            </tr>
+
+            <!-- Item 2 -->
+            <tr class="hover:bg-stone-50/40 transition-colors">
+              <td class="py-4 px-6">
+                <div class="font-semibold text-stone-800">Kemeja Pria Batik Cap Mangkunegaran</div>
+                <div class="text-[11px] text-stone-400 font-mono">ID: BTK-MN-042</div>
+              </td>
+              <td class="py-4 px-6 text-center font-bold text-stone-700 font-mono">15</td>
+              <td class="py-4 px-6 text-right font-semibold text-emerald-800 font-mono">Rp 4.125.000</td>
+            </tr>
+
+            <!-- Item 3 -->
+            <tr class="hover:bg-stone-50/40 transition-colors">
+              <td class="py-4 px-6">
+                <div class="font-semibold text-stone-800">Kain Batik Cap Motif Megamendung Biru</div>
+                <div class="text-[11px] text-stone-400 font-mono">ID: BTK-MGM-012</div>
+              </td>
+              <td class="py-4 px-6 text-center font-bold text-stone-700 font-mono">12</td>
+              <td class="py-4 px-6 text-right font-semibold text-emerald-800 font-mono">Rp 3.300.000</td>
+            </tr>
+
+            <!-- Item 4 -->
+            <tr class="hover:bg-stone-50/40 transition-colors">
+              <td class="py-4 px-6">
+                <div class="font-semibold text-stone-800">Selendang Sutra Batik Tulis Lasem</div>
+                <div class="text-[11px] text-stone-400 font-mono">ID: BTK-LSM-009</div>
+              </td>
+              <td class="py-4 px-6 text-center font-bold text-stone-700 font-mono">7</td>
+              <td class="py-4 px-6 text-right font-semibold text-emerald-800 font-mono">Rp 1.925.000</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER PANEL -->
+  <footer class="text-center py-6 text-xs text-stone-400 w-full bg-white border-t border-stone-100">
+    &copy; 2026 BatikHub Staff Hub Nusantara. Dashboard Manajemen Internal.
+  </footer>
+
+  <!-- Script untuk inisialisasi Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
