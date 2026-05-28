@@ -1,4 +1,4 @@
-# Batik Hub Marketplace ⋆༺𓆩☠︎︎𓆪༻⋆
+# ⋆˚✿˖° Batik Hub Marketplace ˏ༻❁༺ˎ
 
 **Batik Hub** is a platform for buying batik products such as fabric🧵, clothing👕, and accessories☂️. I created this platform because no company or MSME (Micro, Small and Medium Enterprises or in Indonesia called UMKM) in Indonesia has a website for purchasing batik-patterned products without involving a third party, making it difficult for people, especially international customers🌏, to purchase batik-patterned products. In fact, this issue has also been raised by Instagram user David Alfa Sunarna (`@davidalfasunarna`), who encouraged MSMEs to create their own marketplaces to sell their products. This aligns with the international trend of selling products on their own websites without relying entirely on third-party marketplaces🛍️.
 
