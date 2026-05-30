@@ -9,8 +9,8 @@ The technologies and tools I used to build this platform include:
 
 ### 🚀 Core Technologies
 - **Backend Framework:** Java with Spring Boot 4.x
-- **Database:** **PostgreSQL** (Relational Database Management System)
-- **Frontend Styling:** **Tailwind CSS** (for responsive and modern web styling)
+- **Database:** PostgreSQL (Relational Database Management System)
+- **Frontend Styling:** Tailwind CSS (for responsive and modern web styling)
 
 ### 🧰 Utilities & Libraries
 - **Spring Data JPA & Hibernate:** For Object-Relational Mapping (ORM) and seamless database communication.
