@@ -28,15 +28,15 @@ When initializing the project on Spring Initializr [start.spring.io](http://star
 - `Validation` — Java Bean Validation support using Hibernate Validator.
 - `Spring Configuration Processor` — Generating metadata for developer.
 
-## Database Architecture (ERD)
+## 🗄 Database Architecture (ERD)
 <p align="center">
   <img src="batikhub-erd.png" width="700"/>
 </p>
 There are 3 main entities :
 
-- Member
-- Produk
-- Omset
+- `Member`
+- `Produk`
+- `Omset`
 
 The `Member`👥 entity has a **Many-to-Many** relationship with the `Produk`📦 entity because many buyers can buy many products at once. However, I need additional data between these two entities, namely the purchase date📅 and the date the products arrived🚚, so I added a transaction to the ERD, namely `Transaksi`💳. In addition, the relationship between `Produk` and `Omset`📊 is **One-to-One** because one product can only have one in the `Omset` table. If there is a new transaction, the `Omset` table will automatically update through the `Produk` table and there is no need to add new data to the `Omset` table, just update the `jumlah_penjualan` column.
 
